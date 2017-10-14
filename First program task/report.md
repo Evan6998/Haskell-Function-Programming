@@ -1,3 +1,8 @@
+# 函数程序设计实验一
+`黄泳锋, 635051045@qq.com, 15331124, 软件工程`  
+> 说明：  
+试验中做了加法，除法，乘法的单元测试，以及乘法交换律和乘法结合律的测试。在不涉及除零的运算的测试均通过。
+```hs
 module MyFraction where
 import Test.QuickCheck
 
@@ -58,3 +63,4 @@ prop_rattimes_plus_distr (a,b) (c,d) (e,f) = b > 0 && d > 0 && f > 0 ==> (a,b) <
 
 prop_rattimes_commutative_unit :: Fraction -> Fraction -> Fraction -> Property
 prop_rattimes_commutative_unit (a, b) (c, d) (e, f) = b > 0 && d > 0 && f > 0 ==> ((a,b) <-*-> (c,d))<-*->(e,f) <==> (a,b)<-*->((c,d)<-*->(e,f))
+```
